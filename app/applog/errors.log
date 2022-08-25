@@ -1,0 +1,240 @@
+ERROR - 2021-05-20 12:37:50,827 - asyncio - 1707 - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<repeat_every.<locals>.decorator.<locals>.wrapped.<locals>.loop() done, defined at C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py:57> exception=NotImplementedError()>
+Traceback (most recent call last):
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 73, in loop
+    raise exc
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 64, in loop
+    await func()  # type: ignore
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\main.py", line 40, in synchronize_with_mbop_task
+    await mbop_synchronizer.synchronize()
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\synchronizers\mbop.py", line 81, in synchronize
+    raise NotImplementedError
+NotImplementedError
+ERROR - 2021-05-20 23:52:21,381 - uvicorn.error - 399 - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\message_logger.py", line 65, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\message_logger.py", line 61, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\routing.py", line 126, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 15 validation errors for OfferBase
+response -> ext_id
+  field required (type=value_error.missing)
+response -> type
+  field required (type=value_error.missing)
+response -> administration
+  field required (type=value_error.missing)
+response -> name
+  field required (type=value_error.missing)
+response -> city
+  field required (type=value_error.missing)
+response -> street
+  field required (type=value_error.missing)
+response -> house_number
+  field required (type=value_error.missing)
+response -> postal_code
+  field required (type=value_error.missing)
+response -> phone_number
+  field required (type=value_error.missing)
+response -> email
+  field required (type=value_error.missing)
+response -> subject
+  field required (type=value_error.missing)
+response -> time
+  field required (type=value_error.missing)
+response -> type_of_employment
+  field required (type=value_error.missing)
+response -> date_added
+  field required (type=value_error.missing)
+response -> date_of_expiration
+  field required (type=value_error.missing)
+ERROR - 2021-05-20 23:53:28,621 - uvicorn.error - 399 - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\message_logger.py", line 65, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\message_logger.py", line 61, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\routing.py", line 126, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 15 validation errors for OfferBase
+response -> ext_id
+  field required (type=value_error.missing)
+response -> type
+  field required (type=value_error.missing)
+response -> administration
+  field required (type=value_error.missing)
+response -> name
+  field required (type=value_error.missing)
+response -> city
+  field required (type=value_error.missing)
+response -> street
+  field required (type=value_error.missing)
+response -> house_number
+  field required (type=value_error.missing)
+response -> postal_code
+  field required (type=value_error.missing)
+response -> phone_number
+  field required (type=value_error.missing)
+response -> email
+  field required (type=value_error.missing)
+response -> subject
+  field required (type=value_error.missing)
+response -> time
+  field required (type=value_error.missing)
+response -> type_of_employment
+  field required (type=value_error.missing)
+response -> date_added
+  field required (type=value_error.missing)
+response -> date_of_expiration
+  field required (type=value_error.missing)
+ERROR - 2021-05-21 00:15:18,010 - uvicorn.error - 399 - Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\message_logger.py", line 65, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\uvicorn\middleware\message_logger.py", line 61, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\routers\offers.py", line 22, in get_offers
+    return [OfferOut.from_mongo(offer) for offer in result]
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\routers\offers.py", line 22, in <listcomp>
+    return [OfferOut.from_mongo(offer) for offer in result]
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\models\offers.py", line 19, in from_mongo
+    return cls(**dict(data, id=id))
+  File "pydantic\main.py", line 400, in pydantic.main.BaseModel.__init__
+pydantic.error_wrappers.ValidationError: 1 validation error for OfferOut
+id
+  str type expected (type=type_error.str)
+ERROR - 2021-05-21 22:48:21,584 - asyncio - 1707 - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<repeat_every.<locals>.decorator.<locals>.wrapped.<locals>.loop() done, defined at C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py:57> exception=AttributeError("'UserOut' object has no attribute 'get'")>
+Traceback (most recent call last):
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 73, in loop
+    raise exc
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 64, in loop
+    await func()  # type: ignore
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\main.py", line 54, in send_notifications
+    await mail_notification_sender.send_notifications()
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 88, in send_notifications
+    self._send_mail(user, list_of_new_offers_for_user)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 70, in _send_mail
+    user.get('email'),
+AttributeError: 'UserOut' object has no attribute 'get'
+ERROR - 2021-05-21 22:49:56,474 - asyncio - 1707 - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<repeat_every.<locals>.decorator.<locals>.wrapped.<locals>.loop() done, defined at C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py:57> exception=AttributeError("'UserOut' object has no attribute 'get'")>
+Traceback (most recent call last):
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 73, in loop
+    raise exc
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 64, in loop
+    await func()  # type: ignore
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\main.py", line 53, in send_notifications
+    await mail_notification_sender.send_notifications()
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 88, in send_notifications
+    self._send_mail(user, list_of_new_offers_for_user)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 70, in _send_mail
+    user.get('email'),
+AttributeError: 'UserOut' object has no attribute 'get'
+ERROR - 2021-05-21 22:52:53,636 - asyncio - 1707 - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<repeat_every.<locals>.decorator.<locals>.wrapped.<locals>.loop() done, defined at C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py:57> exception=UnicodeEncodeError('ascii', 'Subject: nowe oferty w Mazowieckim Banku Ofert Pracy dla Nauczycieli\r\n\r\nPojawiły się nowe oferty pracy, które mogą Cię zainteresować:\r\n\r\n', 78, 79, 'ordinal not in range(128)')>
+Traceback (most recent call last):
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 73, in loop
+    raise exc
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 64, in loop
+    await func()  # type: ignore
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\main.py", line 53, in send_notifications
+    await mail_notification_sender.send_notifications()
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 90, in send_notifications
+    self._send_mail(user, list_of_new_offers_for_user)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 70, in _send_mail
+    server.sendmail(
+  File "C:\Users\Maciej\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 859, in sendmail
+    msg = _fix_eols(msg).encode('ascii')
+UnicodeEncodeError: 'ascii' codec can't encode character '\u0142' in position 78: ordinal not in range(128)
+ERROR - 2021-05-21 23:29:16,002 - asyncio - 1707 - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<repeat_every.<locals>.decorator.<locals>.wrapped.<locals>.loop() done, defined at C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py:57> exception=NameError("name 'msg' is not defined")>
+Traceback (most recent call last):
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 73, in loop
+    raise exc
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\venv\lib\site-packages\fastapi_utils\tasks.py", line 64, in loop
+    await func()  # type: ignore
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\main.py", line 53, in send_notifications
+    await mail_notification_sender.send_notifications()
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 109, in send_notifications
+    self._send_mail(user, list_of_new_offers_for_user)
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 88, in _send_mail
+    server.send_message(self._create_mail_message(user, list_of_new_offers_for_user))
+  File "C:\Users\Maciej\PycharmProjects\teaching_vacancy\app\senders\notification.py", line 81, in _create_mail_message
+    return msg
+NameError: name 'msg' is not defined
